@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GROUP 4 Covid Detector</title>
+
+        
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="{% static 'css/headerFooter.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/content.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/form.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}" type="text/css">
+    </head>
+    <body>
+       <header>
+            <div>
+                <h1>GROUP 4's Covid Detector AI</h1>
+            </div>
+        </header>
+         <main>
+            <div class="box1">
+                
+                {% if message %}
+                    <div class="successfullSubmissionMessage">
+                        <h2>Thank you for your submisson!</h2>
+                        <p>{{message}}</p>
+                    </div>
+                    
+                {% else %}
+                    <h2>Upload your X-Ray image.</h2>
+                    <form id="quote_form" method="post" action="" enctype="multipart/form-data">
+                
+                        {% csrf_token %}
+                        {% for hidden in quoteForm.hidden_fields %}
+                            {{ hidden }}
+                        {% endfor %}
+                    
+                        {% for field in quoteForm %}
+                            {{ field }}
+                            {% if forloop.counter == 2 %}
+                                {{ formset.management_form }}
+                                <div id='allImageInputs'>
+                                    {% for form in formset %}
+                                        <div class="dragDropFrame">
+                                            <div class=dropBoxContet><div class="linkTypeText">Select</div>&nbsp;your image or drop it here</div>
+                                            {{ form }} 
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                
+                            {% endif %}
+                        {% endfor %}
+                        <input type="submit" name="submit" value="Submit" id="submitForm" />
+                        
+                    </form>
+                    <!-- <div class="loading"><img src="{% static 'images/loading.png' %}"></div> -->
+                {% endif %}
+
+
+                <div class="warning">Them model was trained on the dataset obtained from https://github.com/ieee8023/covid-chestxray-dataset.</div>
+            </div>
+            </main> 
+            <footer>
+            </footer>
+        <script type="text/javascript" src="{% static 'js/quoteFormJs.js' %}"></script> 
+    </body>
+</html>
