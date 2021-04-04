@@ -1,0 +1,60 @@
+
+header{
+    /* background-color: black; */
+    color: black;
+}
+header> * {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+
+}
+header  a{
+  color: #000;
+  text-decoration: none;
+}
+footer{
+    /* background-color: #333; */
+    /* color: white; */
+    padding: 3rem 0rem 1rem 0rem;
+    
+}
+
+footer > *{
+    border-top: 1px solid #DDD;
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+/*
+h3{
+    display: block;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+*/
+
+
+
+
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #AAA;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #AAA;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #AAA;
+}

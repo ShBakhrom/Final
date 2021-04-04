@@ -1,0 +1,119 @@
+
+.dragDropFrame{
+    overflow: hidden;
+    width: 100%;
+    height: 10rem;
+    display: none;
+    border: 3px dashed #CCC;
+    color: #AAA;
+    border-radius: 7px;
+}
+.dragDropBox{
+    height: 100%;
+    width: 100%;
+    filter: alpha(opacity=0);
+	opacity: 0.0;
+}
+.dropBoxContet{
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    position:relative;
+    text-align: center;
+    height: 0px;
+    top: 48%;
+    font-size: 1.5rem;
+}
+.linkTypeText{
+    text-decoration: underline;
+}
+
+
+input[type=text], input[type=email], input[type=number]{
+    -webkit-appearance: none;
+-webkit-border-radius: 0;
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0.5rem 0rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+    border-radius: 5px;
+    border: 0.5px solid #AAA ;
+    outline: none;
+}
+textarea{
+    -webkit-appearance: none;
+-webkit-border-radius: 0;
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    margin: 0.5rem 0rem;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    color: #555;
+    border-radius: 5px;
+    border: 0.5px solid #AAA ;
+    outline: none;
+    resize: none;
+}
+input[type=submit]{
+    -webkit-appearance: none;
+-webkit-border-radius: 0;
+    font-family: 'Teko', sans-serif;
+    width: 100%;
+    margin: 0.5rem 0rem;
+    height: 3.5rem;
+    font-size: 1.7rem;
+    background-color: #265087;
+/*    background-image: linear-gradient(160deg, #08A045, #06E45F);*/
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+.successfullSubmissionMessage{
+    padding: 3rem 2rem;
+    width: 100%;
+    margin: 0.5rem 0rem;
+    text-align: center;
+    /* border: 0.5px solid #AAA ; */
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 0px 4px #CCC;
+    font-size: 1.5rem;
+}
+.checkMark{
+    -webkit-appearance: none;
+    font-size: 10rem;
+    color: #103bb0;
+    margin: 0;
+    margin-bottom: -3rem;
+    position: relative;
+    /* top: -5rem; */
+}
+
+.loading{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -28rem;
+    height: 0;
+    animation: rotation 1s infinite linear;
+    display: none;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
