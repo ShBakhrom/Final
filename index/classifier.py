@@ -7,9 +7,9 @@ from keras.preprocessing import image
 from sklearn.metrics import classification_report, confusion_matrix
 import os
 
-TRAINING_PATH = 'index/static/newDataSet/train'
-VALIDATION_PATH = 'index/static/newDataSet/validation'
-TESTING_PATH = 'index/static/newDataSet/test'
+TRAINING_PATH = 'static/newDataSet/train'
+VALIDATION_PATH = 'static/newDataSet/validation'
+TESTING_PATH = 'static/newDataSet/test'
 
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3,3),activation='relu',input_shape=(224, 224, 3)))
