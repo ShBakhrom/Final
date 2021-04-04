@@ -67,7 +67,6 @@ h2{
     position:  absolute;
     display: flex;
     top: 0;
-    left: ;
     bottom: 0;
     right: 0;
     width: 50%;
@@ -156,10 +155,6 @@ h2{
     .moto{
         font-size: 1.2rem;
        
-        /* grid-template-columns: 1fr ; */
-    }
-    .blocks img{
-        
     }
 }
 
