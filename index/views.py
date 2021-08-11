@@ -34,7 +34,7 @@ def index(request):
             # print(images[0])
             
             
-            request.session['msg'] = 'Upon checking model has identified that patient '+quote_form.fistName+' '+quote_form.lastName+' '+clsfr.checkIfItsCovid() 
+            request.session['msg'] = 'Upon checking model has identified that '+quote_form.fistName+' '+quote_form.lastName+' '+clsfr.checkIfItsCovid() 
             
 
             

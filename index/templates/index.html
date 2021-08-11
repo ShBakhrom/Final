@@ -19,7 +19,7 @@
     <body>
        <header>
             <div>
-                <h1>GROUP 4's Covid Detector AI</h1>
+                <h1>Cat or Dog</h1>
             </div>
         </header>
          <main>
@@ -32,7 +32,7 @@
                     </div>
                     
                 {% else %}
-                    <h2>Upload your X-Ray image.</h2>
+                    <h2>Upload your animal's image.</h2>
                     <form id="quote_form" method="post" action="" enctype="multipart/form-data">
                 
                         {% csrf_token %}
@@ -63,7 +63,7 @@
                 {% endif %}
 
 
-                <div class="warning">Them model was trained on the dataset obtained from https://github.com/ieee8023/covid-chestxray-dataset.</div>
+                
             </div>
             </main> 
             <footer>
