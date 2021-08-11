@@ -1,5 +1,5 @@
 from django.db import models
-from slugify import slugify
+# from slugify import slugify
 # # Create your models here.
 class Quote(models.Model):
     fistName = models.CharField(max_length=25)
@@ -10,7 +10,7 @@ class Quote(models.Model):
 
 def get_image_filename(instance, filename):
     title = str(instance.quote.id)
-    slug = slugify(title)
+    slug = 'test'
     return "index/static/upload/upload/%s-%s" % (slug, filename)  
 
 
